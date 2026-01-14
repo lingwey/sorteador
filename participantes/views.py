@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def prueba():
-    return render ("base.html")
+def prueba(request):
+    return render (request,"base.html")
