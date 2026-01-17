@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    estoy conectado
+    estoy funcionando
+    {% if participantes %}
+        
+        {% for participante in participantes %}
+            <p>{{participante.nombre}} {{participante.apellido}}</p>
+            <hr>
+        {% endfor %}
+    {%else%}
+        <p>no hay participantes</p>
+    {% endif %}
+        
 {% endblock content %}
     

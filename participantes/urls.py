@@ -1,8 +1,12 @@
-from django.urls import path
-from . import views
+from django.urls import path, include
+from .views import *
+from rest_framework.routers import DefaultRouter
 
 app_name = "participante"
+router = DefaultRouter()
+router.register( r'participantes', ParticipanteViewset, basename= 'participantes')
 
 urlpatterns = [
-    path("", views.prueba, name="prueba" )
+    path("api/", include(router.urls) ),
+    path("", mostrarparticipantes, name="participantes")
 ]
