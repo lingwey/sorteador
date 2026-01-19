@@ -8,5 +8,4 @@ router.register( r'participantes', ParticipanteViewset, basename= 'participantes
 
 urlpatterns = [
     path("api/", include(router.urls) ),
-    path("", mostrarparticipantes, name="participantes")
 ]

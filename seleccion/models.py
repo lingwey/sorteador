@@ -1,3 +1,10 @@
 from django.db import models
+from participantes.models import Participante
 
-# Create your models here.
+class Ganador(models.Model):
+    participante = models.ForeignKey(Participante, on_delete=models.CASCADE, related_name="ganadores")
+    fecha_sorteo = models.DateField()
+
+    def __str__(self):
+        return f"{self.participante.nombre} {self.participante.apellido} - {self.fecha_sorteo.strftime('%d/%m')}"
+

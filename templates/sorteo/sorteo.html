@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    <button type="">SORTEAR</button>
-{% endblock content %}
+{% block content2 %}
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">SORTEAR</button>
+    </form>
+    {% if sorteados %}
+        
+        {% for sorteado in sorteados %}
+            <p></p>
+        {% endfor %}
+    {% else %}
+        <p>no hay sorteados aun</p>
+    {% endif %}
+        
+{% endblock content2 %}
