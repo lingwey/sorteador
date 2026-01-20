@@ -1,6 +1,6 @@
 ---
 
-#Sorteador de Alumnos "The Chosen One"
+# Sorteador de Alumnos "The Chosen One"
 
 ¡Bienvenido al **Sorteador de Alumnos**! Este proyecto nació de la necesidad de dinamizar la selección de participantes en clase de una manera divertida, temática y eficiente.
 
@@ -8,7 +8,7 @@
 
 Es una **Landing Page** desarrollada con Django que permite gestionar una lista de participantes y realizar sorteos aleatorios. Si eres el "elegido", el sistema te lo hará saber con una animación especial inspirada en Star Wars.
 
-###Características principales:
+### Características principales:
 
 * **Sorteo Inteligente**: Selección aleatoria mediante algoritmos de Python.
 * **Historial en tiempo real**: Registro automático de los últimos ganadores con fecha y hora.
@@ -18,7 +18,7 @@ Es una **Landing Page** desarrollada con Django que permite gestionar una lista 
 
 ---
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 * **Backend**: Python 3.11 & Django 5.1
 * **API**: Django REST Framework (DRF)
@@ -28,7 +28,7 @@ Es una **Landing Page** desarrollada con Django que permite gestionar una lista 
 
 ---
 
-##Desafíos Técnicos y Soluciones
+## Desafíos Técnicos y Soluciones
 
 En este proyecto apliqué conceptos avanzados para asegurar una experiencia de usuario profesional:
 
@@ -39,7 +39,7 @@ En este proyecto apliqué conceptos avanzados para asegurar una experiencia de u
 
 ---
 
-##Instalación y Uso
+## Instalación y Uso
 
 1. **Clonar el repositorio:**
 ```bash
