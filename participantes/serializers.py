@@ -2,6 +2,6 @@ from rest_framework import serializers
 from .models import Participante
 
 class ParticipanteSerializers (serializers.ModelSerializer):
-    class META:
+    class Meta:
         model= Participante
-        field = ['nombre', 'apellido'] 
+        fields = ['nombre', 'apellido'] 

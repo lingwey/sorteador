@@ -1,17 +1,53 @@
 {% extends 'base.html' %}
+{%load static%}
+
+{% block content %}
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h3 class="card-title">Lista de Participantes</h3>
+            {% if participantes %}
+                <ul class="list-group list-group-flush">
+                {% for participante in participantes %}
+                    <li class="list-group-item">{{ participante.nombre }} {{ participante.apellido }}</li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p class="text-muted">No hay participantes cargados.</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}
 
 {% block content2 %}
-    <form method="POST">
-        {% csrf_token %}
-        <button type="submit">SORTEAR</button>
-    </form>
-    {% if sorteados %}
-        
-        {% for sorteado in sorteados %}
-            <p></p>
-        {% endfor %}
-    {% else %}
-        <p>no hay sorteados aun</p>
-    {% endif %}
-        
+    <div class="card border-primary shadow">
+        <div class="card-body text-center">
+            <h2 class="mb-4">Sorteador</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary btn-lg w-100">¡SORTEAR AHORA!</button>
+            </form>
+
+            {% if ganador %}
+                <div class="alert alert-success mt-4 animate__animated animate__bounceIn">
+                    <h4>🏆 ¡El ganador es! </h4>
+                    <p class="display-6">{{ ganador.nombre }} {{ ganador.apellido }}</p>
+                </div>
+            {% endif %}
+
+            <hr>
+            <h5>Historial de ganadores</h5>
+            {% if ganadores %}
+                {% for g in ganadores %}
+                    <p class="small text-muted">{{ g.participante.nombre }} - {{ g.fecha_sorteo }}</p>
+                {% endfor %}
+            {% else %}
+                <p class="small">No hay sorteos realizados.</p>
+            {% endif %}
+        </div>
+    </div>
+    
+    <div class="modal fade" id="modalGanador" 
+        tabindex="-1" 
+        data-ganador="{% if ganador %}true{% else %}false{% endif %}">
+     </div>
 {% endblock content2 %}

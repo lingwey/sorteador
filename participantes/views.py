@@ -1,8 +1,7 @@
-
 from django.shortcuts import render
 from .models import Participante
 from rest_framework import viewsets, permissions
-from .serializers import ParticipanteSerializers  # nombre corregido
+from .serializers import ParticipanteSerializers
 
 
 def base(request):

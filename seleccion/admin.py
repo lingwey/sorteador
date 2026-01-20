@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Ganador
 
-# Register your models here.
+@admin.register(Ganador)
+class adminGanadores(admin.ModelAdmin):
+    model = Ganador
