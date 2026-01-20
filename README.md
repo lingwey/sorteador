@@ -4,7 +4,7 @@
 
 ¡Bienvenido al **Sorteador de Alumnos**! Este proyecto nació de la necesidad de dinamizar la selección de participantes en clase de una manera divertida, temática y eficiente.
 
-##El Proyecto
+## El Proyecto
 
 Es una **Landing Page** desarrollada con Django que permite gestionar una lista de participantes y realizar sorteos aleatorios. Si eres el "elegido", el sistema te lo hará saber con una animación especial inspirada en Star Wars.
 
